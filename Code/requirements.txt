@@ -1,0 +1,6 @@
+monai==1.2.0
+torch==2.0.1
+torchvision==0.15.2
+numpy==1.24.4
+nibabel==5.1.0
+pyyaml==6.0.1
