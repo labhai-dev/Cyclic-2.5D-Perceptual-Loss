@@ -34,7 +34,7 @@ RANDFLIP_PROB: 0.5
 RANDGAUSSIAN_PROB: 1.0
 
 # GPU setting (if you have a single NVIDIA GPU, let it be cuda:0. Otherwise, put the desired GPU setting.)
-CUDA_SETTING: cuda:1
+CUDA_SETTING: cuda:0
 
 # The generated PET files will be saved into dataset/{Train or Val or Test}/{OUTPUT_SUBDIR}/output{number}.nii.gz
 OUTPUT_SUBDIR: example
