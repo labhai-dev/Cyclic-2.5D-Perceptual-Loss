@@ -1,5 +1,5 @@
 ### Environment Setup
-We used Ubuntu 22.04 LTS, Python 3.9, MONAI 1.2.0, Torch 2.0.1, TorchVision 0.15.2, Nibabel 5.1.0, and PyYAML 6.0.1 with Anaconda 3. Install the required libraries using the command:
+We used Ubuntu 22.04 LTS, Python 3.9, MONAI 1.3.2, Torch 2.0.1, TorchVision 0.15.2, Nibabel 5.1.0, and PyYAML 6.0.1 with Anaconda 3. Install the required libraries using the command:
 
 `pip install -r requirements.txt`
 
@@ -22,7 +22,7 @@ Code/
             ├── MRI/
             ├── PET/
 ```
-Any T1w MRI and tau-PET NIFTI file pairs will work as long as they follow similar file naming as below (the setting in our experiment; the numbers of file pairs in train/validation/test datasets do not need to be same as below), and tau-PET files are registered to the corresponding T1w MRI files. Although same preprocessing as our proposed method is not mandatory, normalisation/standardisation and skull-stripping are highly recommended.
+Any T1w MRI and tau PET NIFTI file pairs will work as long as they follow similar file naming as below (the setting in our experiment; the numbers of file pairs in train/validation/test datasets do not need to be same as below), and tau PET files are registered to the corresponding T1w MRI files. Although same preprocessing as our proposed method is not mandatory, normalization/standardization and skull-stripping are highly recommended.
 
 ```bash
 Code/
@@ -80,4 +80,4 @@ To apply the trained model to images, run:
 `python test.py --config example.yaml`
 
 
-The outputs will be saved according to the `OUTPUT_SUBDIR` specified in the YAML file. The results will be stored as `.../Code/dataset/{Train or Val or Test}/{OUTPUT_SUBDIR}/output{number}.nii.gz`.
+The outputs will be saved according to the `OUTPUT_SUBDIR` specified in the YAML file. The results will be stored as `.../Code/dataset/Test/{OUTPUT_SUBDIR}/output{number}.nii.gz`.

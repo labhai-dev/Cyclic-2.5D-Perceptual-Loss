@@ -1,8 +1,9 @@
 LOG_DIR: log/example # Log file directory
 MODEL_DIR: saved_models/example # Checkpoint is saved in MODEL_DIR
+DATA_DIR: dataset
 GRAD_ACCUM_STEPS: 1 # Gradient Accumulation. If you do not need it, set as 1.
 BATCH_SIZE: 12 # Batch size
-NUM_WORKERS: 6
+NUM_WORKERS: 8
 MAX_EPOCHS: 1000 # Maximum epochs
 LEARNING_RATE: 5e-4 # Maximum learning rate for cosine annealing scheduler
 USE_DROPOUT: True 
@@ -12,12 +13,12 @@ USE_RANDELASTIC: True
 USE_RANDAFFINED: True
 USE_RANDFLIP: True
 USE_RANDGAUSSIAN: True
-EARLY_STOPPING_PATIENCE: 30 # Early stopping patience (applied in the later stages; refer to the paper's algorithm 2.)
+EARLY_STOPPING_PATIENCE: 30 # Early stopping patience
 
 # Hyperparameters for MSE loss, SSIM loss, and Cyclic 2.5D Perceptual loss
-ALPHA: 0.25
-BETA: 0.4
-GAMMA: 0.65
+ALPHA: 1
+BETA: 1
+GAMMA: 0.5
 
 # Channel setting for U-Net
 CHANNELS_SETTING: [64, 128, 256, 512, 1024]
@@ -33,10 +34,14 @@ RANDFLIP_PROB: 0.5
 RANDGAUSSIAN_PROB: 1.0
 
 # GPU setting (if you have a single NVIDIA GPU, let it be cuda:0. Otherwise, put the desired GPU setting.)
-CUDA_SETTING: "cuda:0"
+CUDA_SETTING: cuda:1
 
 # The generated PET files will be saved into dataset/{Train or Val or Test}/{OUTPUT_SUBDIR}/output{number}.nii.gz
-OUTPUT_SUBDIR: "example"
+OUTPUT_SUBDIR: example
 
-# Initial interval; check the paper's algorithm 2.
-INTERVAL: 120
+# Initial cycle duration & scaling factor; check the paper's algorithm 2.
+CYCLE_DURATION: 120
+CYCLE_FACTOR: 2/3
+
+# Evaluation setting
+TEST_CHECKPOINT: final_model.pth # Specify the checkpoint file for testing
