@@ -1,4 +1,6 @@
 # Cyclic 2.5D Perceptual Loss for Cross-Modal 3D Medical Image Synthesis: T1w MRI to Tau PET
+![Teaser image](./overview.png)
+
 Official PyTorch implemention of the **cyclic 2.5D perceptual loss** proposed in our paper: "[Cyclic 2.5D Perceptual Loss for Cross-Modal 3D Medical Image Synthesis: T1w MRI to Tau PET](https://arxiv.org/abs/2406.12632)."
 
 If you use cyclic 2.5D perceptual loss or this repository in your work, please cite:
