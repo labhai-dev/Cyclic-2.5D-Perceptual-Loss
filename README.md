@@ -1,3 +1,13 @@
+# Cyclic 2.5D Perceptual Loss for Cross-Modal 3D Medical Image Synthesis: T1w MRI to Tau PET
+Official PyTorch implemention of the **cyclic 2.5D perceptual loss** proposed in our paper: "[Cyclic 2.5D Perceptual Loss for Cross-Modal 3D Medical Image Synthesis: T1w MRI to Tau PET](https://arxiv.org/abs/2406.12632)."
+
+If you use cyclic 2.5D perceptual loss or this repository in your work, please cite:
+
+> **Cyclic 2.5D Perceptual Loss for Cross-Modal 3D Medical Image Synthesis: T1w MRI to Tau PET**<br>
+> https://arxiv.org/abs/2406.12632<br>
+> Junho Moon, Symac Kim, Haejun Chung, Ikbeom Jang<br>
+
+## Usage
 ### Environment Setup
 We used Ubuntu 22.04 LTS, Python 3.9, MONAI 1.3.2, Torch 2.0.1, TorchVision 0.15.2, Nibabel 5.1.0, and PyYAML 6.0.1 with Anaconda 3. Install the required libraries using the command:
 
